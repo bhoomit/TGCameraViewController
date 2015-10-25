@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGCameraViewController">
             <connections>
                 <outlet property="actionsView" destination="Ni6-M2-hWT" id="SLr-Oc-ge0"/>
+                <outlet property="activityMonitor" destination="Pde-Cl-b7H" id="wQG-eH-d2D"/>
                 <outlet property="albumButton" destination="wxI-gO-dPX" id="WtA-c8-1cs"/>
                 <outlet property="bottomLeftView" destination="2rS-OA-lDQ" id="3Tj-6s-eEi"/>
                 <outlet property="bottomRightView" destination="HFV-tF-409" id="gvx-Rz-7bX"/>
@@ -98,6 +99,9 @@
                                 <constraint firstAttribute="height" constant="58" id="eM7-tr-8mw"/>
                             </constraints>
                         </imageView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Pde-Cl-b7H">
+                            <rect key="frame" x="290" y="290" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
@@ -111,8 +115,10 @@
                         <constraint firstItem="2rS-OA-lDQ" firstAttribute="leading" secondItem="dIq-rQ-gzr" secondAttribute="leading" id="cyk-bG-M9K"/>
                         <constraint firstAttribute="centerY" secondItem="xFF-75-cke" secondAttribute="centerY" id="fOl-Ic-N0Q"/>
                         <constraint firstAttribute="bottom" secondItem="2rS-OA-lDQ" secondAttribute="bottom" id="fjD-cR-2nv"/>
+                        <constraint firstItem="Pde-Cl-b7H" firstAttribute="top" secondItem="xFF-75-cke" secondAttribute="top" id="hMY-dG-ztm"/>
                         <constraint firstAttribute="width" secondItem="dIq-rQ-gzr" secondAttribute="height" multiplier="1:1" priority="999" id="rY0-Cn-lea"/>
                         <constraint firstItem="ljD-PV-2sR" firstAttribute="leading" secondItem="dIq-rQ-gzr" secondAttribute="leading" id="rxy-AI-9fw"/>
+                        <constraint firstItem="Pde-Cl-b7H" firstAttribute="centerX" secondItem="dIq-rQ-gzr" secondAttribute="centerX" id="s90-EP-Z4N"/>
                         <constraint firstItem="xFF-75-cke" firstAttribute="leading" secondItem="dIq-rQ-gzr" secondAttribute="leading" id="vve-NH-MbK"/>
                     </constraints>
                     <connections>

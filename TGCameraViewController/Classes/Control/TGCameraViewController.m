@@ -51,6 +51,7 @@
 
 @property (strong, nonatomic) TGCamera *camera;
 @property (nonatomic) BOOL wasLoaded;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityMonitor;
 
 - (IBAction)closeTapped;
 - (IBAction)gridTapped;
@@ -253,6 +254,7 @@
     [self viewWillDisappearWithCompletion:^{
         [_camera takePhotoWithCaptureView:_captureView videoOrientation:videoOrientation cropSize:_captureView.frame.size
                                completion:^(UIImage *photo) {
+                                   [_activityMonitor startAnimating];
                                    [_delegate cameraDidTakePhoto:photo];
 //                                   TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:photo];
 //                                   [self.navigationController pushViewController:viewController animated:YES];
