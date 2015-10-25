@@ -92,7 +92,7 @@
     [_albumButton.layer setMasksToBounds:YES];
     
     
-    _camera = [TGCamera cameraWithFlashButton:_flashButton];
+    _camera = [TGCamera cameraWithFlashButton:_flashButton devicePosition:AVCaptureDevicePositionFront];
     
     _captureView.backgroundColor = [UIColor clearColor];
     
