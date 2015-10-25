@@ -253,8 +253,9 @@
     [self viewWillDisappearWithCompletion:^{
         [_camera takePhotoWithCaptureView:_captureView videoOrientation:videoOrientation cropSize:_captureView.frame.size
                                completion:^(UIImage *photo) {
-                                   TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:photo];
-                                   [self.navigationController pushViewController:viewController animated:YES];
+                                   [_delegate cameraDidTakePhoto:photo];
+//                                   TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:photo];
+//                                   [self.navigationController pushViewController:viewController animated:YES];
                                }];
     }];
 }
